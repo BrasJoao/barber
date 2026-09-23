@@ -22,7 +22,8 @@
       justify-content: center;
       min-height: 500px;
       width: 100%;
-      overflow: hidden;
+      overflow: visible;
+      box-sizing: border-box;
     }
 
     .barber-logo {
@@ -31,6 +32,7 @@
       text-align: center;
       position: relative;
       filter: drop-shadow(0 15px 30px rgba(0,0,0,.45));
+      box-sizing: border-box;
     }
 
     .logo-crown {
@@ -160,14 +162,14 @@
         min-height: 330px;
         margin-top: 10px;
         padding: 0 10px;
-        box-sizing: border-box;
+        overflow: visible;
       }
 
       .barber-logo {
         width: 100%;
         max-width: 350px;
         transform: scale(.9);
-        transform-origin: center;
+        transform-origin: center center;
       }
 
       .logo-monogram {
@@ -204,22 +206,38 @@
       .logo-crown {
         font-size: 43px;
       }
+
+      /* BOTÃO AGENDAR DO CABEÇALHO */
+      .header .btn-small {
+        display: inline-flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        flex-shrink: 0;
+        white-space: nowrap;
+        position: relative;
+        z-index: 20;
+      }
     }
 
 
-    /* CELULARES MENORES */
+    /* =========================
+       CELULARES MENORES
+       ========================= */
 
     @media (max-width: 480px) {
 
       .hero-logo {
-        min-height: 285px;
+        min-height: 300px;
         margin-top: 0;
-        padding: 0 5px;
+        padding: 10px 5px;
+        overflow: visible;
       }
 
       .barber-logo {
+        width: 100%;
         max-width: 300px;
         transform: scale(.88);
+        transform-origin: center center;
       }
 
       .logo-crown {
@@ -275,15 +293,43 @@
       .logo-line span {
         width: 30px;
       }
+
+      /* GARANTE QUE O AGENDAR CONTINUE DOURADO E VISÍVEL */
+      .header .btn-small {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: 78px;
+        height: 38px;
+        padding: 0 12px;
+        flex-shrink: 0;
+        white-space: nowrap;
+        color: #0b0b0b !important;
+        background: linear-gradient(
+          135deg,
+          #9a7239,
+          #f6d993,
+          #b8873e
+        ) !important;
+        border: 1px solid #c9a66b !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative;
+        z-index: 50;
+      }
     }
 
 
-    /* CELULARES MUITO PEQUENOS */
+    /* =========================
+       CELULARES MUITO PEQUENOS
+       ========================= */
 
     @media (max-width: 360px) {
 
       .hero-logo {
-        min-height: 255px;
+        min-height: 270px;
+        padding-left: 0;
+        padding-right: 0;
       }
 
       .barber-logo {
@@ -318,11 +364,16 @@
       .logo-line span {
         width: 25px;
       }
+
+      .header .btn-small {
+        min-width: 72px;
+        padding: 0 9px;
+        font-size: 12px;
+      }
     }
 
 
-    /* EVITA QUALQUER ROLAGEM HORIZONTAL */
-
+    /* EVITA ROLAGEM HORIZONTAL */
     html,
     body {
       max-width: 100%;
@@ -350,7 +401,7 @@
 
     <a
       class="btn btn-small"
-      href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+      href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber"
       target="_blank"
       rel="noopener"
     >
@@ -358,6 +409,7 @@
     </a>
 
   </header>
+
 
   <main>
 
@@ -384,7 +436,7 @@
 
           <a
             class="btn"
-            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber"
             target="_blank"
             rel="noopener"
           >
@@ -398,6 +450,7 @@
         </div>
 
       </div>
+
 
       <!-- LOGO PRINCIPAL -->
       <div class="hero-logo">
@@ -432,6 +485,7 @@
 
     </section>
 
+
     <!-- SERVIÇOS -->
     <section id="servicos" class="section">
 
@@ -446,6 +500,7 @@
         </h2>
 
       </div>
+
 
       <div class="cards">
 
@@ -468,7 +523,7 @@
           </strong>
 
           <a
-            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20um%20corte%20na%20Borges%20Barber."
+            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20um%20corte%20na%20Borges%20Barber"
             target="_blank"
             rel="noopener"
           >
@@ -476,6 +531,7 @@
           </a>
 
         </article>
+
 
         <article class="card">
 
@@ -496,7 +552,7 @@
           </strong>
 
           <a
-            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20uma%20barba%20na%20Borges%20Barber."
+            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20uma%20barba%20na%20Borges%20Barber"
             target="_blank"
             rel="noopener"
           >
@@ -504,6 +560,7 @@
           </a>
 
         </article>
+
 
         <article class="card card-muted">
 
@@ -529,6 +586,7 @@
 
     </section>
 
+
     <!-- GALERIA -->
     <section id="galeria" class="section gallery-section">
 
@@ -543,6 +601,7 @@
         </h2>
 
       </div>
+
 
       <div class="gallery">
 
@@ -578,6 +637,7 @@
 
     </section>
 
+
     <!-- SOBRE -->
     <section id="sobre" class="split section">
 
@@ -597,6 +657,7 @@
           agende seu horário pelo WhatsApp.
         </p>
 
+
         <div class="info-list">
 
           <div>
@@ -606,6 +667,7 @@
             </b>
 
             <span>
+
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Rua+Emerson+Leandro+Simolim+Da+Silva,+97"
                 target="_blank"
@@ -613,9 +675,11 @@
               >
                 Rua Emerson Leandro Simolim Da Silva, 97
               </a>
+
             </span>
 
           </div>
+
 
           <div>
 
@@ -643,6 +707,7 @@
 
     </section>
 
+
     <!-- CONTATO -->
     <section id="contato" class="cta">
 
@@ -660,7 +725,7 @@
 
       <a
         class="btn"
-        href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+        href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber"
         target="_blank"
         rel="noopener"
       >
@@ -671,16 +736,18 @@
 
   </main>
 
+
   <!-- BOTÃO WHATSAPP -->
   <a
     class="whatsapp"
-    href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+    href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber"
     target="_blank"
     rel="noopener"
     aria-label="Agendar pelo WhatsApp"
   >
     WA
   </a>
+
 
   <!-- RODAPÉ -->
   <footer>
