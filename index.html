@@ -3,114 +3,564 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Borges Barber — cortes, barba e atendimento pelo WhatsApp.">
+
   <title>Borges Barber | Barbearia</title>
+
+  <!-- ÍCONE DA ABA DO NAVEGADOR -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230b0b0b'/%3E%3Ctext x='50' y='72' text-anchor='middle' font-family='Georgia,serif' font-size='65' font-weight='bold' fill='%23c9a66b'%3EB%3C/text%3E%3Cpath d='M25 25h50' stroke='%23c9a66b' stroke-width='3'/%3E%3Cpath d='M30 20l8-10 12 10 10-10 10 10' fill='none' stroke='%23c9a66b' stroke-width='3'/%3E%3C/svg%3E">
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- ESTILO DO LOGO PRINCIPAL -->
+  <style>
+
+    .hero-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+    }
+
+    .barber-logo {
+      width: 470px;
+      text-align: center;
+      position: relative;
+      filter: drop-shadow(0 15px 30px rgba(0,0,0,.45));
+    }
+
+    .logo-crown {
+      font-family: Georgia, serif;
+      font-size: 55px;
+      line-height: 1;
+      margin-bottom: -4px;
+      background: linear-gradient(
+        135deg,
+        #8f6a35,
+        #f4d58d,
+        #b8873e
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-monogram {
+      position: relative;
+      height: 190px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-monogram span {
+      font-family: Georgia, serif;
+      font-size: 190px;
+      font-weight: bold;
+      line-height: 1;
+      background: linear-gradient(
+        135deg,
+        #8f6a35,
+        #f6d993,
+        #b8873e
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-razor {
+      position: absolute;
+      width: 125px;
+      height: 8px;
+      background: linear-gradient(
+        90deg,
+        #9a7239,
+        #f0cd82
+      );
+      transform: rotate(48deg);
+      top: 91px;
+      left: 172px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(201,166,107,.25);
+    }
+
+    .logo-razor::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: -4px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #0b0b0b;
+      border: 3px solid #c9a66b;
+    }
+
+    .logo-razor::after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: -4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #0b0b0b;
+      border: 3px solid #c9a66b;
+    }
+
+    .logo-name {
+      font-family: "Playfair Display", serif;
+      font-size: 49px;
+      letter-spacing: 12px;
+      font-weight: 700;
+      margin-left: 12px;
+
+      background: linear-gradient(
+        135deg,
+        #9a7239,
+        #f6d993,
+        #b8873e
+      );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      margin-top: 8px;
+
+      color: #d5b675;
+      font-size: 14px;
+      letter-spacing: 8px;
+    }
+
+    .logo-line span {
+      width: 65px;
+      height: 1px;
+      background: #c9a66b;
+      display: block;
+    }
+
+    @media (max-width: 800px) {
+
+      .hero-logo {
+        min-height: 390px;
+        margin-top: 25px;
+      }
+
+      .barber-logo {
+        width: 90%;
+        max-width: 390px;
+      }
+
+      .logo-monogram {
+        height: 160px;
+      }
+
+      .logo-monogram span {
+        font-size: 160px;
+      }
+
+      .logo-razor {
+        width: 105px;
+        left: calc(50% - 52px);
+        top: 76px;
+      }
+
+      .logo-name {
+        font-size: 36px;
+        letter-spacing: 8px;
+        margin-left: 8px;
+      }
+
+      .logo-line {
+        font-size: 11px;
+        letter-spacing: 6px;
+      }
+
+      .logo-line span {
+        width: 45px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="header">
-    <a class="logo" href="#inicio">BORGES <span>BARBER</span></a>
+
+    <a class="logo" href="#inicio">
+      BORGES <span>BARBER</span>
+    </a>
+
     <nav>
       <a href="#servicos">Serviços</a>
       <a href="#galeria">Cortes</a>
       <a href="#sobre">A barbearia</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="btn btn-small" href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber." target="_blank" rel="noopener">Agendar</a>
+
+    <a
+      class="btn btn-small"
+      href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+      target="_blank"
+      rel="noopener"
+    >
+      Agendar
+    </a>
+
   </header>
 
   <main>
+
+    <!-- INÍCIO -->
     <section id="inicio" class="hero">
+
       <div class="hero-content">
-        <p class="eyebrow">ESTILO • PRECISÃO • PRESENÇA</p>
-        <h1>Seu estilo.<br><span>Seu momento.</span></h1>
-        <p class="hero-text">Cortes e barba com atenção aos detalhes. Agende seu horário direto pelo WhatsApp.</p>
+
+        <p class="eyebrow">
+          ESTILO • PRECISÃO • PRESENÇA
+        </p>
+
+        <h1>
+          Seu estilo.<br>
+          <span>Seu momento.</span>
+        </h1>
+
+        <p class="hero-text">
+          Cortes e barba com atenção aos detalhes.
+          Agende seu horário direto pelo WhatsApp.
+        </p>
+
         <div class="actions">
-          <a class="btn" href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-          <a class="btn btn-outline" href="#servicos">Ver serviços</a>
+
+          <a
+            class="btn"
+            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+            target="_blank"
+            rel="noopener"
+          >
+            Agendar pelo WhatsApp
+          </a>
+
+          <a class="btn btn-outline" href="#servicos">
+            Ver serviços
+          </a>
+
         </div>
+
       </div>
-      <div class="hero-image image-placeholder">
-        <span>FOTO PRINCIPAL</span>
-        <small>Coloque sua foto em assets/hero.jpg</small>
+
+      <!-- LOGO PRINCIPAL -->
+      <div class="hero-logo">
+
+        <div class="barber-logo">
+
+          <div class="logo-crown">
+            ♛
+          </div>
+
+          <div class="logo-monogram">
+
+            <span>B</span>
+
+            <div class="logo-razor"></div>
+
+          </div>
+
+          <div class="logo-name">
+            BORGES
+          </div>
+
+          <div class="logo-line">
+            <span></span>
+            BARBER
+            <span></span>
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
+    <!-- SERVIÇOS -->
     <section id="servicos" class="section">
+
       <div class="section-heading">
-        <p class="eyebrow">SERVIÇOS</p>
-        <h2>O cuidado está nos detalhes.</h2>
+
+        <p class="eyebrow">
+          SERVIÇOS
+        </p>
+
+        <h2>
+          O cuidado está nos detalhes.
+        </h2>
+
       </div>
+
       <div class="cards">
+
         <article class="card">
-          <span class="number">01</span>
-          <h3>Corte</h3>
-          <p>Acabamento pensado para o seu estilo.</p>
-          <strong>R$ 30</strong>
-          <a href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20um%20corte%20na%20Borges%20Barber." target="_blank" rel="noopener">Agendar →</a>
+
+          <span class="number">
+            01
+          </span>
+
+          <h3>
+            Corte
+          </h3>
+
+          <p>
+            Acabamento pensado para o seu estilo.
+          </p>
+
+          <strong>
+            R$ 30
+          </strong>
+
+          <a
+            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20um%20corte%20na%20Borges%20Barber."
+            target="_blank"
+            rel="noopener"
+          >
+            Agendar →
+          </a>
+
         </article>
+
         <article class="card">
-          <span class="number">02</span>
-          <h3>Barba</h3>
-          <p>Acabamento e cuidado para completar o visual.</p>
-          <strong>R$ 15</strong>
-          <a href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20uma%20barba%20na%20Borges%20Barber." target="_blank" rel="noopener">Agendar →</a>
+
+          <span class="number">
+            02
+          </span>
+
+          <h3>
+            Barba
+          </h3>
+
+          <p>
+            Acabamento e cuidado para completar o visual.
+          </p>
+
+          <strong>
+            R$ 15
+          </strong>
+
+          <a
+            href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Quero%20agendar%20uma%20barba%20na%20Borges%20Barber."
+            target="_blank"
+            rel="noopener"
+          >
+            Agendar →
+          </a>
+
         </article>
+
         <article class="card card-muted">
-          <span class="number">03</span>
-          <h3>Em breve</h3>
-          <p>Novos serviços e informações serão adicionados.</p>
-          <strong>—</strong>
+
+          <span class="number">
+            03
+          </span>
+
+          <h3>
+            Em breve
+          </h3>
+
+          <p>
+            Novos serviços e informações serão adicionados.
+          </p>
+
+          <strong>
+            —
+          </strong>
+
         </article>
+
       </div>
+
     </section>
 
+    <!-- GALERIA -->
     <section id="galeria" class="section gallery-section">
+
       <div class="section-heading">
-        <p class="eyebrow">PORTFÓLIO</p>
-        <h2>Alguns trabalhos.</h2>
+
+        <p class="eyebrow">
+          PORTFÓLIO
+        </p>
+
+        <h2>
+          Alguns trabalhos.
+        </h2>
+
       </div>
+
       <div class="gallery">
-        <div class="gallery-item image-placeholder"><span>CORTE 01</span><small>assets/corte-1.jpg</small></div>
-        <div class="gallery-item image-placeholder"><span>CORTE 02</span><small>assets/corte-2.jpg</small></div>
-        <div class="gallery-item image-placeholder"><span>CORTE 03</span><small>assets/corte-3.jpg</small></div>
-        <div class="gallery-item image-placeholder"><span>CORTE 04</span><small>assets/corte-4.jpg</small></div>
-        <div class="gallery-item image-placeholder"><span>CORTE 05</span><small>assets/corte-5.jpg</small></div>
-        <div class="gallery-item image-placeholder"><span>CORTE 06</span><small>assets/corte-6.jpg</small></div>
-      </div>
-    </section>
 
-    <section id="sobre" class="split section">
-      <div class="about-image image-placeholder">
-        <span>FOTO DA BARBEARIA</span>
-        <small>assets/barbearia-1.jpg</small>
-      </div>
-      <div class="about-text">
-        <p class="eyebrow">BORGES BARBER</p>
-        <h2>Um espaço feito para você.</h2>
-        <p>Um ambiente para cuidar do visual, trocar ideia e sair se sentindo bem. As informações de endereço e horário serão adicionadas aqui.</p>
-        <div class="info-list">
-          <div><b>Endereço</b><span>A informar</span></div>
-          
-          <div><b>Instagram</b><span> <a href="https://instagram.com/borgeszxzx" target="_blank" rel="noopener">@borgeszxzx</a></span></div>
+        <div class="gallery-item">
+          <img
+            src="WhatsApp Image 2026-09-22 at 20.01.57.jpeg"
+            alt="Corte 01"
+          >
         </div>
+
+        <div class="gallery-item">
+          <img
+            src="01.jpeg"
+            alt="Corte 02"
+          >
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="02.jpeg"
+            alt="Corte 03"
+          >
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="03.jpeg"
+            alt="Corte 04"
+          >
+        </div>
+
       </div>
+
     </section>
 
-    <section id="contato" class="cta">
-      <p class="eyebrow">RESERVE SEU HORÁRIO</p>
-      <h2>Pronto para renovar o visual?</h2>
-      <p>Fale com a Borges Barber pelo WhatsApp.</p>
-      <a class="btn" href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <!-- SOBRE -->
+    <section id="sobre" class="split section">
+
+      <div class="about-text">
+
+        <p class="eyebrow">
+          BORGES BARBER
+        </p>
+
+        <h2>
+          Um espaço feito para você.
+        </h2>
+
+        <p>
+          Um ambiente para cuidar do visual, trocar ideia e sair
+          se sentindo bem. Venha nos visitar no endereço abaixo e
+          agende seu horário pelo WhatsApp.
+        </p>
+
+        <div class="info-list">
+
+          <div>
+
+            <b>
+              Endereço
+            </b>
+
+            <span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Emerson+Leandro+Simolim+Da+Silva,+97"
+                target="_blank"
+                rel="noopener"
+              >
+                Rua Emerson Leandro Simolim Da Silva, 97
+              </a>
+            </span>
+
+          </div>
+
+          <div>
+
+            <b>
+              Instagram
+            </b>
+
+            <span>
+
+              <a
+                href="https://instagram.com/borgeszxzx"
+                target="_blank"
+                rel="noopener"
+              >
+                @borgeszxzx
+              </a>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="cta">
+
+      <p class="eyebrow">
+        RESERVE SEU HORÁRIO
+      </p>
+
+      <h2>
+        Pronto para renovar o visual?
+      </h2>
+
+      <p>
+        Fale com a Borges Barber pelo WhatsApp.
+      </p>
+
+      <a
+        class="btn"
+        href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+        target="_blank"
+        rel="noopener"
+      >
+        Chamar no WhatsApp
+      </a>
+
+    </section>
+
   </main>
 
-  <a class="whatsapp" href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">WA</a>
+  <!-- BOTÃO WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="https://wa.me/5516992871965?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Borges%20Barber."
+    target="_blank"
+    rel="noopener"
+    aria-label="Agendar pelo WhatsApp"
+  >
+    WA
+  </a>
 
+  <!-- RODAPÉ -->
   <footer>
-    <div class="logo">BORGES <span>BARBER</span></div>
-    <p>© 2026 Borges Barber. Todos os direitos reservados.</p>
-    <a href="https://instagram.com/borgeszxzx" target="_blank" rel="noopener">@borgeszxzx</a>
+
+    <div class="logo">
+      BORGES <span>BARBER</span>
+    </div>
+
+    <p>
+      © 2026 Borges Barber. Todos os direitos reservados.
+    </p>
+
+    <a
+      href="https://instagram.com/borgeszxzx"
+      target="_blank"
+      rel="noopener"
+    >
+      @borgeszxzx
+    </a>
+
   </footer>
+
 </body>
 </html>
